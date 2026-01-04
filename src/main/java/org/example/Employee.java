@@ -50,15 +50,17 @@ public class Employee implements Comparable<Employee> {
     public static void main(String[] args) {
         List<Employee> employeeList = new ArrayList<>();
 
-        Employee employee1 = new Employee("shorav", 123);
-        Employee employee2 = new Employee("sharma", 789);
-        Employee employee3 = new Employee("sks", 456);
+        Employee employee1 = new Employee("def", 123);
+        Employee employee2 = new Employee("xyz", 789);
+        Employee employee3 = new Employee("abc", 123);
 
         employeeList.add(employee1);
         employeeList.add(employee2);
         employeeList.add(employee3);
 
-        Collections.sort(employeeList);
+        //Collections.sort(employeeList);
+
+        Collections.sort(employeeList, new EmployeeNameComparator());
 
         System.out.println(employeeList);
     }
