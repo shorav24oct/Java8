@@ -11,7 +11,9 @@ public class MyFIImpl {
          */
 
         MyFunctionalInterface myFunctionalInterface1 = () -> { System.out.println("Switch On"); };
+        myFunctionalInterface1.m1();
 
         MyFunctionalInterface myFunctionalInterface2 = () -> System.out.println("Switch On");
+        myFunctionalInterface2.m1();
     }
 }
