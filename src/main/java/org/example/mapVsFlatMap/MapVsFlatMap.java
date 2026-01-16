@@ -22,5 +22,8 @@ public class MapVsFlatMap {
 
         List<String> phones = customers.stream().flatMap(customer -> customer.getPhoneNumbers().stream()).collect(Collectors.toList());
         System.out.println(phones);
+
+        List<Customer> customerWithNameS = customers.stream().filter(customer -> customer.getName().startsWith("s")).collect(Collectors.toList());
+        System.out.println(customerWithNameS);
     }
 }
