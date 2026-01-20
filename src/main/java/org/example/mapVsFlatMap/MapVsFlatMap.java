@@ -25,5 +25,8 @@ public class MapVsFlatMap {
 
         List<Customer> customerWithNameS = customers.stream().filter(customer -> customer.getName().startsWith("s")).collect(Collectors.toList());
         System.out.println(customerWithNameS);
+
+        List<Integer> eligibleForVoting = customers.stream().map(Customer::getAge).filter(age -> age >= 18).collect(Collectors.toList());
+        System.out.println(eligibleForVoting);
     }
 }

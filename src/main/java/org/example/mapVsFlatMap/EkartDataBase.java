@@ -9,10 +9,10 @@ public class EkartDataBase {
 
     public static List<Customer> getAll() {
         return Stream.of(
-                new Customer(101, "john", "john@gmail.com", Arrays.asList("397937955", "21654725")),
-                new Customer(102, "smith", "smith@gmail.com", Arrays.asList("89563865", "2487238947")),
-                new Customer(103, "peter", "peter@gmail.com", Arrays.asList("38946328654", "3286487236")),
-                new Customer(104, "shorav", "shorav@gmail.com", Arrays.asList("389246829364", "948609467"))
+                new Customer(101, "john", "john@gmail.com", 30, Arrays.asList("397937955", "21654725")),
+                new Customer(102, "smith", "smith@gmail.com", 17, Arrays.asList("89563865", "2487238947")),
+                new Customer(103, "peter", "peter@gmail.com", 15, Arrays.asList("38946328654", "3286487236")),
+                new Customer(104, "shorav", "shorav@gmail.com", 35, Arrays.asList("389246829364", "948609467"))
         ).collect(Collectors.toList());
     }
 
