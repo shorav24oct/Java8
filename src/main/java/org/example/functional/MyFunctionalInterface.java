@@ -3,7 +3,7 @@ package org.example.functional;
 @FunctionalInterface
 public interface MyFunctionalInterface {
 
-    void m1();
+    int sum(int a, int b);
 
     default void m2() {
         System.out.println("Default Method 1");
