@@ -6,10 +6,10 @@ import java.util.stream.Collectors;
 
 public class FirstNonRepeatedCharacter {
     public static void main(String[] args) {
-        String s = "aabbccdeeffg";
+        String s = "programming";
 
-        Character result = s.chars()
-                .mapToObj(c -> (char) c)
+        Character result = s.chars() //break the word into letters, but in numeric form
+                .mapToObj(c -> (char) c)// convert numbers back to letters
                 .collect(Collectors.groupingBy(c -> c, LinkedHashMap::new, Collectors.counting()))
                 .entrySet().stream()
                 .filter(e -> e.getValue() == 1)
