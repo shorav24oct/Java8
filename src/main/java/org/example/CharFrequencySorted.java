@@ -20,5 +20,18 @@ public class CharFrequencySorted {
                         System.out.println(e.getKey() + " -> " + e.getValue())
                         );
 
+        System.out.println("********");
+
+        // Sort by Count (Descending)
+        str.chars()
+                .mapToObj(c -> (char) c)
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
+                .entrySet()
+                .stream()
+                .sorted(java.util.Map.Entry.<Character, Long>comparingByValue().reversed())
+                .forEach(e ->
+                        System.out.println(e.getKey() + " -> " + e.getValue())
+                );
+
     }
 }
