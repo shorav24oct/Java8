@@ -1,6 +1,8 @@
 package org.example.classobj;
 
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 public class EmployeesGroupedByDept {
     public static void main(String[] args) {
@@ -10,5 +12,10 @@ public class EmployeesGroupedByDept {
                 new Employee(3,"Neha",35,80000,"IT"),
                 new Employee(4,"Pooja",25,40000,"HR")
         );
+
+        Map<String, List<Employee>> byDept = employees.stream()
+                .collect(Collectors.groupingBy(Employee::getDept));
+
+        byDept.forEach((k,v) -> System.out.println(k + " -> " + v.size()));
     }
 }
