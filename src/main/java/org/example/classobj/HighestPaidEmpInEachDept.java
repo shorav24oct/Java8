@@ -6,12 +6,14 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-public class HighestPaidEmployee {
+public class HighestPaidEmpInEachDept {
     public static void main(String[] args) {
         List<Employee> employees = EmpDB.allEmp();
 
         Map<String, Optional<Employee>> highestPaid = employees.stream()
-                .collect(Collectors.groupingBy(Employee::getDept, Collectors.maxBy(
+                .collect(Collectors.groupingBy(
+                        Employee::getDept,
+                        Collectors.maxBy(
                         Comparator.comparingDouble(Employee::getSalary)
                 )));
 
