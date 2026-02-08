@@ -1,4 +1,4 @@
-package org.example.classobj;
+package org.example.classobj.db;
 
 import java.util.Objects;
 

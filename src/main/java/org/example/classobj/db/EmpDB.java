@@ -1,10 +1,10 @@
-package org.example.classobj;
+package org.example.classobj.db;
 
 import java.util.List;
 
 public class EmpDB {
 
-    static List<Employee> allEmp() {
+    public static List<Employee> allEmp() {
         return List.of(
                 new Employee(1,"Amit",30,60000,"IT"),
                 new Employee(2,"Ravi",28,50000,"HR"),
