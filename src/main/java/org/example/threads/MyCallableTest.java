@@ -9,15 +9,14 @@ public class MyCallableTest {
     public static void main(String[] args) throws ExecutionException, InterruptedException, TimeoutException {
 
         List<Future> allFutures;
-        try (ExecutorService service = Executors.newFixedThreadPool(10)) {
 
+            ExecutorService service = Executors.newFixedThreadPool(10);
             allFutures = new ArrayList<>();
 
             for (int i = 0; i < 100; i++) {
                 Future<Integer> future = service.submit(new Task());
                 allFutures.add(future);
             }
-        }
 
         // 100 futures with 100 placeholders
 
