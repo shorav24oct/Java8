@@ -11,7 +11,7 @@ public class SortBySalThenName {
         List<Employee> employees = EmpDB.allEmp();
 
         employees.stream()
-                .sorted(Comparator.comparing(Employee::getSalary).reversed()
+                .sorted(Comparator.comparingDouble(Employee::getSalary).reversed()
                         .thenComparing(Employee::getName))
                 .forEach(e -> System.out.println(e.getName() + " -> " + e.getSalary()));
     }
