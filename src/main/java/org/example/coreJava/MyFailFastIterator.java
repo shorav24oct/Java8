@@ -1,6 +1,5 @@
-package org.example;
+package org.example.coreJava;
 
-import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
