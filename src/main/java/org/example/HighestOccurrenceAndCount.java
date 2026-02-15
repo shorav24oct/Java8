@@ -19,5 +19,13 @@ public class HighestOccurrenceAndCount {
 
         System.out.println(entry1);
         System.out.println(entry2);
+
+        System.out.println("********");
+
+        collect.entrySet().stream()
+                .sorted(Map.Entry.<Integer, Long>comparingByValue().reversed()
+                        .thenComparing(Map.Entry.<Integer, Long>comparingByKey().reversed())
+                )
+                .forEach((e -> System.out.println(e.getKey() + " -> " + e.getValue())));
     }
 }
